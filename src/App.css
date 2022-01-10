@@ -1,3 +1,9 @@
+html{
+  font-family: 'Open Sans', sans-serif;
+}
+body{
+  scroll-behavior: smooth;
+}
 .App {
   text-align: center;
 }
