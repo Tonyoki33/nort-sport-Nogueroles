@@ -8,10 +8,10 @@ function App() {
     <div className="App">
       <Nav/>
       <div className='items_container'>
-        <ItemListContainer item="Zapatilla"/>
-        <ItemListContainer item="Remera"/>
-        <ItemListContainer item="Camisa"/>
-        <ItemListContainer item="Pantalon"/>
+        <ItemListContainer price={110} item="Zapatilla"/>
+        <ItemListContainer price={15} item="Remera"/>
+        <ItemListContainer price={30} item="Camisa"/>
+        <ItemListContainer price={38} item="Pantalon"/>
       </div>
       <Footer  />
     </div>
