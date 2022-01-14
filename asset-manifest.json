@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/nort-sport-Nogueroles/static/css/main.67f146f5.css",
+    "main.js": "/nort-sport-Nogueroles/static/js/main.f75520c5.js",
+    "static/js/787.4555f260.chunk.js": "/nort-sport-Nogueroles/static/js/787.4555f260.chunk.js",
+    "static/media/fa-solid-900.svg": "/nort-sport-Nogueroles/static/media/fa-solid-900.7a8b4f130182d19a2d7c.svg",
+    "static/media/fa-brands-400.svg": "/nort-sport-Nogueroles/static/media/fa-brands-400.2f517e09eb2ca6650ff5.svg",
+    "static/media/fa-solid-900.eot": "/nort-sport-Nogueroles/static/media/fa-solid-900.9bbb245e67a133f6e486.eot",
+    "static/media/fa-solid-900.ttf": "/nort-sport-Nogueroles/static/media/fa-solid-900.be9ee23c0c6390141475.ttf",
+    "static/media/fa-regular-400.svg": "/nort-sport-Nogueroles/static/media/fa-regular-400.4689f52cc96215721344.svg",
+    "static/media/fa-brands-400.eot": "/nort-sport-Nogueroles/static/media/fa-brands-400.23f19bb08961f37aaf69.eot",
+    "static/media/fa-brands-400.ttf": "/nort-sport-Nogueroles/static/media/fa-brands-400.527940b104eb2ea366c8.ttf",
+    "static/media/fa-solid-900.woff": "/nort-sport-Nogueroles/static/media/fa-solid-900.eeccf4f66002c6f2ba24.woff",
+    "static/media/fa-brands-400.woff": "/nort-sport-Nogueroles/static/media/fa-brands-400.2285773e6b4b172f07d9.woff",
+    "static/media/fa-solid-900.woff2": "/nort-sport-Nogueroles/static/media/fa-solid-900.1551f4f60c37af51121f.woff2",
+    "static/media/fa-brands-400.woff2": "/nort-sport-Nogueroles/static/media/fa-brands-400.d878b0a6a1144760244f.woff2",
+    "static/media/fa-regular-400.eot": "/nort-sport-Nogueroles/static/media/fa-regular-400.77206a6bb316fa0aded5.eot",
+    "static/media/fa-regular-400.ttf": "/nort-sport-Nogueroles/static/media/fa-regular-400.491974d108fe4002b2aa.ttf",
+    "static/media/fa-regular-400.woff": "/nort-sport-Nogueroles/static/media/fa-regular-400.bb58e57c48a3e911f15f.woff",
+    "static/media/fa-regular-400.woff2": "/nort-sport-Nogueroles/static/media/fa-regular-400.7a3337626410ca2f4071.woff2",
+    "index.html": "/nort-sport-Nogueroles/index.html",
+    "main.67f146f5.css.map": "/nort-sport-Nogueroles/static/css/main.67f146f5.css.map",
+    "main.f75520c5.js.map": "/nort-sport-Nogueroles/static/js/main.f75520c5.js.map",
+    "787.4555f260.chunk.js.map": "/nort-sport-Nogueroles/static/js/787.4555f260.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.67f146f5.css",
+    "static/js/main.f75520c5.js"
+  ]
+}
