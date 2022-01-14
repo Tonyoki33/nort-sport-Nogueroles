@@ -3,6 +3,7 @@ html{
 }
 body{
   scroll-behavior: smooth;
+  background: #282c34;
 }
 .App {
   text-align: center;
