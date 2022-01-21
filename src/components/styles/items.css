@@ -11,10 +11,10 @@
     margin: 2rem;
     height: max-content;
     width: 12rem;
-    background: white;
+    background-color: white;
 }
 
-.item_container h2{
+.item_container h2,.item_container h3{
     font-size: 2rem;
 }
 

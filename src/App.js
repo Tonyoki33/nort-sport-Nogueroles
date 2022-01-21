@@ -2,20 +2,21 @@ import './App.css';
 import Footer from './components/Footer';
 import Nav from './components/Nav';
 import ItemListContainer from './components/ItemListContainer';
+import './components/Item';
 import './components/styles/main.css'
+import { Fragment } from 'react';
+
 
 function App() {
+
   return (
-    <div className="App">
+    <Fragment className="App">
       <Nav/>
-      <div className='items_container'>
-        <ItemListContainer price={110} item="Zapatilla"/>
-        <ItemListContainer price={15} item="Remera"/>
-        <ItemListContainer price={30} item="Camisa"/>
-        <ItemListContainer price={38} item="Pantalon"/>
+      <div>
+        <ItemListContainer />
       </div>
       <Footer  />
-    </div>
+    </Fragment>
   );
 }
 
