@@ -1,29 +1,11 @@
 import React, { Fragment } from 'react';
-
-// class Footer extends React.Component{
-//     render(){
-//         const customStyle ={
-//             backgroundColor : "red",
-//             padding: 10,
-//             fontFamily: "Arial",
-//             color:"white"
-//         }
-//         return(
-//             <div style={customStyle}>Hola soy el footer</div>
-//         );
-//     }
-// }
+import './styles/footer.css';
 
 const Footer = () => {
-    const customStyle ={
-        backgroundColor : "red",
-        padding: "10px",
-        fontFamily: "Arial",
-        color:"white"
-    }
+    
     return(
             <Fragment>
-            <div style={customStyle}>Hola soy el footer</div>
+            <div className='footer_container'>Hola soy el footer</div>
             </Fragment>
     )
 }
