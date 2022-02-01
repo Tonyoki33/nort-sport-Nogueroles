@@ -1,14 +1,14 @@
 import './styles/items.css'
-import {getProducts} from './server/itemsServer';
+import {getProducts} from './services/itemsServer';
 import React, { Fragment,useEffect,useState } from 'react';
 import Item from './Item'
 
-const ItemDetail = ({name,stock, price, detail}) => {
-
+const ItemDetail = ({product}) => {
+    const {title, description, price, sold_quantity,warranty,thumbnail} = product
     const [itemsQty, setItemsQty] = useState(0);
 
     const setRealStock = (qty) => {
-        if (qty <= stock){
+        if (qty <= sold_quantity){
             setItemsQty(qty);
         }
     }
@@ -24,12 +24,12 @@ const ItemDetail = ({name,stock, price, detail}) => {
 /*Componentes dentro del contenedor*/
     return(
 
-        <>
+        <Fragment>
     <div className='item_detail-container'>
-        <h2>{name}</h2>
-        <img src="https://via.placeholder.com/120" alt="imagen-item" />
-        <span>Detalle:{detail}</span>
-        <h3>Stock:{stock}</h3>
+        <h2>{title}</h2>
+        <img src={thumbnail} alt="imagen-item" />
+        <span>Detalle:{description}</span>
+        <h3>Stock:{sold_quantity}</h3>
         <h3>Precio:{price}</h3>
                 
                 
@@ -49,7 +49,7 @@ const ItemDetail = ({name,stock, price, detail}) => {
     </div>
             
         
-        </>
+        </Fragment>
     )
 }
 
