@@ -10,7 +10,6 @@ const CardWidget = () => {
             <i className="fas fa-shopping-basket"></i>
         </a>
         <p style={{color:"white"}}></p>
-        <ItemListContainer/>
         </Fragment>
     )
 }

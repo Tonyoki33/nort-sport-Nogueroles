@@ -1,23 +1,25 @@
 import './App.css';
-import { Fragment, useState } from 'react';
-import Footer from './components/Footer';
-import Nav from './components/Nav';
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetail from './components/itemDetail'
-import './components/server/itemsServer'
-import './components/styles/main.css'
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { Home } from './components/home';
+import { NoMatch } from './components/NoMatch';
+import { Layout } from './components/Layout';
 import ItemDetailContainer from './components/ItemDetailContainer';
 
 
-function App() {
+
+
+const App = () => {
   
   return (
-    <Fragment>
-      <Nav/>
-      {/* <ItemListContainer /> */}
-      <ItemDetailContainer/>
-      <Footer  />
-    </Fragment>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/nort-sport-Nogueroles" element={<Layout />}>
+      <Route index element={ <Home/> } />
+      <Route path="/nort-sport-Nogueroles/:id" element={<ItemDetailContainer/>} />
+      <Route path="*" element={<NoMatch/>}/>
+      </Route>
+    </Routes>
+  </BrowserRouter>
   );
 }
 

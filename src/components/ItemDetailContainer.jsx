@@ -1,35 +1,41 @@
 import React, { Fragment,useEffect,useState } from 'react';
 import Item from "./Item"
 import './styles/items.css'
-import {getProducts} from './server/itemsServer';
+import {getProductDescription, getProductDetail, getProducts} from './services/itemsServer';
 import ItemDetail from './itemDetail';
+import { useParams } from 'react-router-dom';
 
 
 const ItemDetailContainer = () => {
-    const  [items, setItems] = useState([])
+    const { id } = useParams();
+    const [product, setProdcut] = useState(null);
     useEffect(() => {
         let mounted = true;
-        setTimeout(()=>{
+        
+            Promise.all([getProductDetail(id),getProductDescription(id)])
+                .then(results =>{
+                    console.log(results);
+                    let item = results[0];
+                    item.description = results[1].plain_text;
+                    if(mounted){
+                        setProdcut(item)
+                        
+                    }
+                })
+        
+        return () => mounted = false;{
+        
+        };
+    },  [id]);
+    
 
-            getProducts().then(items => {
-                if (mounted) {
-                    setItems(items)
-                    console.log(items[0])
-                }
-            })
-        },2000)
-    return () => mounted = false;
-      
-    }, []);
     
 /*Componentes dentro del contenedor*/
     return(
 
         <>
-            <div>
-            {items.map(product =>{
-                    return <ItemDetail name={product.name} detail={product.detail} stock={product.stock} price={product.price}/>
-                })}
+            <div style={{fontSize:40, color:"white"}}>
+                {product ? <ItemDetail product={product}/>:null}
             </div>
         
         </>

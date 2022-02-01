@@ -1,20 +1,21 @@
 import React, { Fragment,useEffect,useState } from 'react';
 import Item from "./Item"
 import './styles/items.css'
-import {getProducts} from './server/itemsServer';
+import {getProducts, getProductsFromCategory} from './services/itemsServer';
 
 const ItemListContainer = () => {
     const  [items, setItems] = useState([])
     useEffect(() => {
         let mounted = true;
         setTimeout(()=>{
-
-            getProducts().then(items => {
-                if (mounted) {
-                    setItems(items)
+            getProductsFromCategory("MLA1430").then(items=>{
+                if (mounted){
+                    setItems(items.results)
+                    console.log(items.results);
                 }
             })
-        },)
+            
+        },2000)
     return () => mounted = false;
       
     }, []);
@@ -43,9 +44,9 @@ const ItemListContainer = () => {
         <>
             <div className='items_container'>
                 {items.map(product =>{
-                    return <Item title={product.name} stock={product.stock} price={product.price}/>
+                    return <Item id={product.id} title={product.title} img={product.thumbnail} stock={product.sold_quantity} price={product.price}/>
                 })}
-            </div>
+            </div> 
         
         </>
     )
