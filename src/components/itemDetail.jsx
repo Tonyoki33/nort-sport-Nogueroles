@@ -1,26 +1,18 @@
 import './styles/items.css'
-import {getProducts} from './services/itemsServer';
-import React, { Fragment,useEffect,useState } from 'react';
-import Item from './Item'
+import React, { Fragment,useContext,useState } from 'react';
+import ItemCounter from './ItemCount';
+import { CartContext } from './context/CartContext';
+
+
 
 const ItemDetail = ({product}) => {
-    const {title, description, price, sold_quantity,warranty,thumbnail} = product
+    
+    const {onAdd} = useContext(CartContext)
+   
+    const {title, description, price, sold_quantity,warranty,thumbnail,available_quantity} = product
     const [itemsQty, setItemsQty] = useState(0);
+    console.log(available_quantity)
 
-    const setRealStock = (qty) => {
-        if (qty <= sold_quantity){
-            setItemsQty(qty);
-        }
-    }
-    const removeStock = (qty) => {
-        if (qty >= 0){
-            setItemsQty(qty)
-            console.log(`remove${qty}`);
-        }
-    }
-    
-
-    
 /*Componentes dentro del contenedor*/
     return(
 
@@ -29,26 +21,13 @@ const ItemDetail = ({product}) => {
         <h2>{title}</h2>
         <img src={thumbnail} alt="imagen-item" />
         <span>Detalle:{description}</span>
-        <h3>Stock:{sold_quantity}</h3>
+        <h3>Stock:{available_quantity}</h3>
         <h3>Precio:{price}</h3>
-                
-                
-                <div className='stock_container'>
-                    <button onClick={()=>removeStock(itemsQty-1)}>
-                        <p>-</p>
-                    </button>
-                        <p value={itemsQty} className='stock_qty'>{itemsQty}</p>
-                    <button onClick={()=>setRealStock(itemsQty+1)}>
-                        <p>+</p>
-                    </button>
-                    <button onClick={(event)=>{
-                    event.preventDefault();
-                    console.log();
-                    }} type="submit">AGREGAR</button>
+                <div>
+                   <ItemCounter itemsQty={itemsQty} availableQty={available_quantity} setItemsQty={setItemsQty}  />
                 </div>
-    </div>
-            
-        
+        <button onClick={()=> onAdd(product, itemsQty)} variant="primary">Añadir al carrito</button>
+    </div> 
         </Fragment>
     )
 }
