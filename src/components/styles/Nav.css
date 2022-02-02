@@ -163,6 +163,21 @@ nav .nav_functions .nav_interactions{
 }
 
 
+.cart_items{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--third_clr);
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 0 0 0.5rem;
+    top:30%;
+    left: -20%;
+    background-color: var(--first_clr);
+}
+
 
 /*
 *****************

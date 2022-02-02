@@ -4,6 +4,7 @@ import { Home } from './components/home';
 import { NoMatch } from './components/NoMatch';
 import { Layout } from './components/Layout';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import { CartProvider } from './components/context/CartContext';
 
 
 
@@ -11,6 +12,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 const App = () => {
   
   return (
+    <CartProvider>
   <BrowserRouter>
     <Routes>
       <Route path="/nort-sport-Nogueroles" element={<Layout />}>
@@ -20,6 +22,7 @@ const App = () => {
       </Route>
     </Routes>
   </BrowserRouter>
+  </CartProvider>
   );
 }
 
