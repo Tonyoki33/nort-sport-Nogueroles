@@ -1,5 +1,4 @@
-import React, { Fragment,useEffect,useState } from 'react';
-import Item from "./Item"
+import React, { useEffect,useState } from 'react';
 import './styles/items.css'
 import {getProductDescription, getProductDetail, getProducts} from './services/itemsServer';
 import ItemDetail from './itemDetail';

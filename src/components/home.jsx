@@ -1,19 +1,34 @@
 import Footer from './Footer';
-import Nav from './Nav';
 import ItemListContainer from './ItemListContainer';
-import { Fragment, useState } from 'react';
-import ItemDetail from './itemDetail'
+import { Fragment, useEffect, useState } from 'react';
 import './services/itemsServer'
 import './styles/main.css'
-import ItemDetailContainer from './ItemDetailContainer';
+import { getProductsFromCategory } from './services/itemsServer';
+import { useParams } from 'react-router-dom';
 
 
 export const Home = () => {
-  
+
+  const  [products, setProducts] = useState([])
+  const { id } = useParams();
+    useEffect(() => {
+        let mounted = true;
+        setTimeout(()=>{
+            getProductsFromCategory("MLA","MLA1430").then(items=>{
+                if (mounted){
+                    setProducts(items.results)
+                    console.log(items.results);
+                }
+            })
+            
+        },2000)
+    return () => mounted = false;
+      
+    }, [id]);
+  console.log(`hola${products}`)
   return (
     <Fragment>
-      <ItemListContainer />
-      {/* <ItemDetailContainer/> */}
+      <ItemListContainer products={products} />
       <Footer  />
     </Fragment>
   );
