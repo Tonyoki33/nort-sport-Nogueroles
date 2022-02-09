@@ -3,6 +3,7 @@ import './styles/items.css'
 
 const ItemListContainer = ({products}) => {
 
+
 /*Componentes dentro del contenedor*/
     return(
 

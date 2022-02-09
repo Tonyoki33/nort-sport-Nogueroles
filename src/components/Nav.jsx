@@ -1,13 +1,39 @@
-import React, {Fragment} from "react";
+import React, {createContext, Fragment,useEffect, useState} from "react";
 import './styles/fontawesome-free-5.15.4-web/css/all.css'
 import './styles/Nav.css';
+import './styles/Nav-scrolled.css';
+import ScrolledNav from "./elements/ScrolledNav";
 import CardWidget from "./CardWidget";
 import { Link } from "react-router-dom";
 
 
 const Nav = () =>{
+    const [scrolling, setScrolling] = useState(true);
+    const [scrollTop, setScrollTop] = useState(0);
+
+    useEffect(()=>{
+        const onScroll = () =>{
+            let currentPosition = window.pageYOffset;
+            if (currentPosition > scrollTop) {
+                setScrolling(false);
+                console.log("im false");
+            } else {
+                setScrolling(true);
+                console.log("im true");
+              }
+              setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
+            }
+        
+            window.addEventListener("scroll", onScroll);
+            return () => window.removeEventListener("scroll", onScroll);
+          }, [scrollTop]);
+
+    
+
     return(
         <Fragment>
+            {scrolling == true ? 
+            
             <nav>
                 <section className="nav_logo ">
                     <li>
@@ -92,6 +118,11 @@ const Nav = () =>{
                     </form>
                 </section>
             </nav>
+            :
+            <ScrolledNav />
+            }
+            
+            
         </Fragment>
     )
 }

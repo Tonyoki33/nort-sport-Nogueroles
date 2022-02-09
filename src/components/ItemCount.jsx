@@ -16,11 +16,15 @@ const ItemCounter = ({itemsQty,availableQty,setItemsQty}) => {
 
     return (
     <div  className='stock_container'>
-        <button onClick={()=>removeStock(itemsQty-1) }variant="primary">
+        <button onClick={(e)=>{
+            e.preventDefault();
+            removeStock(itemsQty-1) }}variant="primary">
             <p>-</p>
         </button>
         <p className='stock_qty'>{itemsQty}</p>
-        <button onClick={()=>setRealStock(itemsQty+1)}variant="primary">
+        <button onClick={(e)=>{
+            e.preventDefault();
+            setRealStock(itemsQty+1)}}variant="primary">
             <p>+</p>
         </button>
     </div>

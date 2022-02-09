@@ -1,11 +1,11 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import { Home } from './components/home';
+import { Home } from './components/pages/home';
 import { NoMatch } from './components/NoMatch';
-import { Layout } from './components/Layout';
+import { Layout } from './components/MainLayout';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { CartProvider } from './components/context/CartContext';
-
+import Cart from "./components/Cart";
 
 
 

@@ -33,7 +33,7 @@ const ItemDetailContainer = () => {
     return(
 
         <>
-            <div style={{fontSize:40, color:"white"}}>
+            <div className='item_detail'>
                 {product ? <ItemDetail product={product}/>:null}
             </div>
         

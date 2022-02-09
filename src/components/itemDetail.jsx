@@ -23,9 +23,6 @@ const ItemDetail = ({product}) => {
         <span>Detalle:{description}</span>
         <h3>Stock:{available_quantity}</h3>
         <h3>Precio:{price}</h3>
-                <div>
-                   <ItemCounter itemsQty={itemsQty} availableQty={available_quantity} setItemsQty={setItemsQty}  />
-                </div>
         <button onClick={()=> onAdd(product, itemsQty)} variant="primary">Añadir al carrito</button>
     </div> 
         </Fragment>
