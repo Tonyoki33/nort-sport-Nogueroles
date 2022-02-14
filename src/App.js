@@ -5,7 +5,6 @@ import { NoMatch } from './components/NoMatch';
 import { Layout } from './components/MainLayout';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { CartProvider } from './components/context/CartContext';
-import Cart from "./components/Cart";
 
 
 
