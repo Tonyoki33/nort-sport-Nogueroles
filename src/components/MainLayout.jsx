@@ -9,7 +9,6 @@ export const Layout = () => {
   const [loading, setLoading] = useState(false);
   const [categories, setCategories] = useState([]);
 
-
   return (
     <div className="main_layout">
       <Nav />
