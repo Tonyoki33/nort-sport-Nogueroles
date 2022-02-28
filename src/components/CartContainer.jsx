@@ -34,7 +34,6 @@ const CartContainer = () => {
       }, 0)
 
       const order = {buyer: buyer, items: itemsToBuy, total:totalPriceGlobal}
-
       addDoc( collection(db, "orders"), order)
       .then(doc => {
         alert(`Tu compra se ha realizado con éxito, esta es la id de tu orden: ${doc.id}`)

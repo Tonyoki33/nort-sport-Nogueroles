@@ -32,8 +32,6 @@ const Nav = () =>{
 
     return(
         <Fragment>
-            {scrolling == true ? 
-            
             <nav>
                 <section className="nav_logo ">
                     <li>
@@ -41,12 +39,12 @@ const Nav = () =>{
                     </li>
                 </section>
                 <section className="nav_functions">
-                    <form className="nav_search">
+                    {/* <form className="nav_search">
                         <input className="nav_search-bar"></input>
                         <button className="nav_search-btn" type="submit">
                             <i className="fas fa-search"></i>
                         </button>
-                    </form>
+                    </form> */}
                    
                     <div className="nav_categories">
                         <ul className="nav_categories-ul">
@@ -118,11 +116,7 @@ const Nav = () =>{
                     </form>
                 </section>
             </nav>
-            :
-            <ScrolledNav />
-            }
-            
-            
+
         </Fragment>
     )
 }

@@ -36,7 +36,6 @@ const CardWidget = () => {
 
   return (
     <Fragment>
-      {scrolling == true ? (
         <div className="cart-widget">
         <i onClick={toggleSwitchBtn} className="fas fa-shopping-basket"></i>
       <p className="cart_items">{items.length}</p>
@@ -44,15 +43,6 @@ const CardWidget = () => {
         <CartContainer />
       </cart>
     </div>
-      ) : (
-        <div>
-            <i onClick={toggleSwitchBtn} className="fas fa-shopping-basket"></i>
-          <p className="cart_items-scrolled">{items.length}</p>
-          <cart className={toggle ? "cart_container-on" : "cart_container-off"}>
-            <CartContainer />
-          </cart>
-        </div>
-      )}
     </Fragment>
   );
 };
