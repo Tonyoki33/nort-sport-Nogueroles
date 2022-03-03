@@ -1,5 +1,22 @@
-*{
+* {
   margin: 0;
   padding: 0;
   font-size: 62.5%;
+}
+
+@media (max-width: 1024px) {
+  * {
+    font-size: 58%;
+  }
+}
+
+@media (max-width: 768px) {
+  * {
+    font-size: 50%;
+  }
+}
+@media (max-width: 425px) {
+  * {
+    font-size: 45%;
+  }
 }
