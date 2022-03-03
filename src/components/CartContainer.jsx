@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-import Cart from "./Cart";
 import "./styles/cart.css";
 import EmptyCart from "./elements/EmptyCart";
 import { CartContext } from "./context/CartContext";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../firebase";
+import CartList from "./CartList";
 
 const CartContainer = () => {
   const { items } = useContext(CartContext);
@@ -67,21 +67,7 @@ const CartContainer = () => {
       ) : (
         
       <div>
-          <div className="cart_detail-body">
-            {items.map((el) => {
-              return (
-                <Cart
-                  title={el.name}
-                  thumbnail={el.imageURL}
-                  domain_id={el.domain_id}
-                  qty={el.qty}
-                  price={el.price}
-                  length={el.length}
-                  available_quantity={el.stock}
-                />
-              );
-            })}
-          </div>
+          <CartList products = {items}/>
           <div className="cart_detail-body">
             Total price:{totalPrice}
           </div>

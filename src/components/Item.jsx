@@ -3,7 +3,6 @@ import './styles/items.css'
 import './ItemListContainer'
 import { useNavigate } from 'react-router-dom';
 
-/*Noté que si pongo los parámetros entre {} me los toma, pero aún así no se imprimen dentro del contenedor*/
 const Item = ({product}) => {
     const {id, name, imageURL, price} = product
     const navigate = useNavigate();
@@ -13,16 +12,11 @@ const Item = ({product}) => {
     }    
     return ( 
         <Fragment>
-            
-                {/*Datos del Item<*/}
             <div className='item_container' >
                 <h2>{name}</h2>
                 <img src={imageURL} alt="imagen-item" />
-                
                 <p>Price:{price}</p>
-
                 <button onClick={()=>goToProduct()}>Ver detalles del producto</button>
-             
             </div>
         </Fragment>
      );

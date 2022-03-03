@@ -11,8 +11,6 @@ const ItemDetail = ({product}) => {
    
     const {name, desc, price, imageURL, stock} = product
     const [itemsQty, setItemsQty] = useState(0);
-
-/*Componentes dentro del contenedor*/
     return(
 
         <Fragment>

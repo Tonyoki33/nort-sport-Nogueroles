@@ -1,4 +1,3 @@
-import {Fragment} from 'react';
 
 const ItemCounter = ({itemsQty,availableQty,setItemsQty}) => {
 

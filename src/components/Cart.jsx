@@ -1,10 +1,10 @@
-const Cart = ({ title, qty , thumbnail, domain_id, price}) => {
-  
+const Cart = ({ product }) => {
+  const {name, qty , imageURL, domain_id, price} = product;
 
   return (
     <div className="cart_detail-product">
-      {title}({qty})
-      <img width="100rem" src={thumbnail} alt={domain_id} />
+      {name}({qty})
+      <img width="100rem" src={imageURL} alt={domain_id} />
       Precio: {price}
      
     </div>

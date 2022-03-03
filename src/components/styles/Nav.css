@@ -46,6 +46,7 @@ nav .nav_functions {
 /* } */
 nav .nav_functions .nav_categories {
   grid-column: 1/2;
+  display: flex;
   background-color: var(--third_clr);
 }
 nav .nav_functions .nav_interactions {
@@ -210,4 +211,19 @@ nav .nav_functions .nav_interactions {
   font-weight: bold;
   font-size: 2.4rem;
   color: var(--first_clr);
+}
+
+/*Hamburger Menu*/
+nav .burger-nav {
+  display: none;
+  background-color: var(--third_clr);
+}
+
+@media (max-width: 768px) {
+  nav .nav_functions .nav_categories {
+    display: none;
+  }
+  nav .burger-nav {
+    display: flex;
+  }
 }

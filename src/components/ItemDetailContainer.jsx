@@ -1,7 +1,6 @@
 import React, { useEffect,useState } from 'react';
 import './styles/items.css'
-import {getProductDescription, getProductDetail, getProducts} from './services/itemsServer';
-import { collection,doc, getDoc} from "firebase/firestore";
+import { doc, getDoc} from "firebase/firestore";
 import { db } from "../firebase";
 import ItemDetail from './itemDetail';
 import { useParams } from 'react-router-dom';
@@ -27,41 +26,6 @@ const ItemDetailContainer = () => {
     }, [id])
     
 
-
-
-
-
-
-    // useEffect(() => {
-        
-        // getDoc(collection(db, "items", `${id}`)).then((docs) => {
-        //     let prods = [];
-        //     docs.forEach((doc) => {
-        //       prods.push({ id: doc.id, ...doc.data() });
-        //     });
-        //     setProdcut(prods)
-        //     console.log("somos itemDetailContainer",product);
-        // })
-
-
-            // Promise.all([getProductDetail(id),getProductDescription(id)])
-            //     .then(results =>{
-            //         console.log(results);
-            //         let item = results[0];
-            //         item.description = results[1].plain_text;
-            //         if(mounted){
-            //             setProdcut(item)
-                //     }
-                // })
-               
-    //     return () => {
-
-    //     };
-    // },  [id]);
-
-
-
-/*Componentes dentro del contenedor*/
     return(
 
         <>
