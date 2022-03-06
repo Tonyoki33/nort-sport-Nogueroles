@@ -51,7 +51,6 @@
 }
 
 .item_container button:hover {
-  cursor: pointer;
   background-color: var(--third_clr);
   color: var(--second_clr);
 }
@@ -65,20 +64,33 @@
   margin: 0.5rem;
   font-size: 2rem;
 }
-.stock_container button {
+
+.stock_container button,
+.stock_containe--addBtn {
   background-color: #ffeb4d;
   padding: 0.5rem;
   border: none;
+  cursor: pointer;
   border-radius: 2px;
+  transition: transform 40ms ease;
 }
+
+.stock_container button:hover,
+.stock_containe--addBtn:hover {
+  transform: scale(1.1);
+  background-color: var(--second_clr);
+  color: var(--third_clr);
+}
+
 .stock_container button p {
   font-size: 2rem;
 }
 
 /*details*/
 .item_detail {
-  padding: 18rem 0 0 0;
+  padding: 6rem 0 0 0;
   width: 100%;
+  height: 100vh;
   background: var(--third_clr);
 }
 
@@ -91,9 +103,16 @@
   height: max-content;
   color: var(--second_clr);
   font-size: 3rem;
-  padding: 4rem 0;
   /* overflow: hidden; */
 }
+
+.item_detail-container img,
+.item_detail-container h2,
+.item_detail-container h3,
+.item_detail-container span {
+  margin: 2rem 0;
+}
+
 .item_detail-container img {
   width: 20rem;
 }
@@ -105,5 +124,6 @@
 }
 .item_detail-container span {
   width: 100rem;
+  text-align: center;
   font-size: 1.5rem;
 }

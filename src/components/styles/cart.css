@@ -6,8 +6,8 @@
 
 .cart_container-on {
   position: absolute;
-  top: 6rem;
-  left: -100%;
+  top: 4rem;
+  left: -240%;
 }
 .cart_container-off {
   display: none;

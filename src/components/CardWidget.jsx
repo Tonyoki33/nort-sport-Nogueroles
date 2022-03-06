@@ -13,15 +13,26 @@ const CardWidget = () => {
     toggle ? setToggle(false) : setToggle(true);
   };
 
+  const calculateItemsWidget = () => {
+    let newArrItems = items
+      .map((i) => i.qty)
+      .reduce((sum, val) => sum + val, 0);
+    return newArrItems;
+  };
+
   return (
     <Fragment>
-        <div className="cart-widget">
+      <div className="cart-widget">
         <i onClick={toggleSwitchBtn} className="fas fa-shopping-basket"></i>
-      <p className="cart_items">{items.length}</p>
-      <section className={toggle ? "cart_container-on" : "cart_container-off"}>
-        <CartContainer />
-      </section>
-    </div>
+        <p className="cart_items">
+          {items.length === 0 ? 0 : calculateItemsWidget()}
+        </p>
+        <section
+          className={toggle ? "cart_container-on" : "cart_container-off"}
+        >
+          <CartContainer />
+        </section>
+      </div>
     </Fragment>
   );
 };

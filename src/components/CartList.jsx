@@ -1,14 +1,14 @@
-import React from 'react'
-import Cart from './Cart'
+import React from "react";
+import Cart from "./Cart";
 
-const CartList = ({products}) => {
+const CartList = ({ products }) => {
   return (
-    <div>
-        {products.map((product)=>{
-            return(<Cart key={product.id} product={product}/>)
-        })}
+    <div className="cart_detail-product">
+      {products.map((product) => {
+        return <Cart key={product.id} product={product} />;
+      })}
     </div>
-  )
-}
+  );
+};
 
 export default CartList;

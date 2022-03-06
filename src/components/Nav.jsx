@@ -19,29 +19,7 @@ const Nav = () => {
         <section className="nav_functions">
           <div className="burger-nav"> </div>
 
-          <div className="nav_categories">
-            <ul className="nav_categories-ul">
-              <li className="nav_categories-li">
-                <a className="nav_category-a" href="#">
-                  ZAPATILLAS
-                </a>
-              </li>
-            </ul>
-            <ul className="nav_categories-ul">
-              <li className="nav_categories-li">
-                <a className="nav_category-a" href="#">
-                  REMERAS
-                </a>
-              </li>
-            </ul>
-            <ul className="nav_categories-ul">
-              <li className="nav_categories-li">
-                <a className="nav_category-a" href="#">
-                  VENDER
-                </a>
-              </li>
-            </ul>
-          </div>
+          <div className="nav_categories"></div>
           <form className="nav_interactions">
             <a id="nav_btn-prof" className="nav_profile">
               <i className="far fa-user"></i>
