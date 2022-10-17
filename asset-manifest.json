@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nort-sport-Nogueroles/static/css/main.67f146f5.css",
-    "main.js": "/nort-sport-Nogueroles/static/js/main.f75520c5.js",
+    "main.css": "/nort-sport-Nogueroles/static/css/main.4fe73030.css",
+    "main.js": "/nort-sport-Nogueroles/static/js/main.89f4c9c8.js",
     "static/js/787.4555f260.chunk.js": "/nort-sport-Nogueroles/static/js/787.4555f260.chunk.js",
     "static/media/fa-solid-900.svg": "/nort-sport-Nogueroles/static/media/fa-solid-900.7a8b4f130182d19a2d7c.svg",
     "static/media/fa-brands-400.svg": "/nort-sport-Nogueroles/static/media/fa-brands-400.2f517e09eb2ca6650ff5.svg",
@@ -19,12 +19,12 @@
     "static/media/fa-regular-400.woff": "/nort-sport-Nogueroles/static/media/fa-regular-400.bb58e57c48a3e911f15f.woff",
     "static/media/fa-regular-400.woff2": "/nort-sport-Nogueroles/static/media/fa-regular-400.7a3337626410ca2f4071.woff2",
     "index.html": "/nort-sport-Nogueroles/index.html",
-    "main.67f146f5.css.map": "/nort-sport-Nogueroles/static/css/main.67f146f5.css.map",
-    "main.f75520c5.js.map": "/nort-sport-Nogueroles/static/js/main.f75520c5.js.map",
+    "main.4fe73030.css.map": "/nort-sport-Nogueroles/static/css/main.4fe73030.css.map",
+    "main.89f4c9c8.js.map": "/nort-sport-Nogueroles/static/js/main.89f4c9c8.js.map",
     "787.4555f260.chunk.js.map": "/nort-sport-Nogueroles/static/js/787.4555f260.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.67f146f5.css",
-    "static/js/main.f75520c5.js"
+    "static/css/main.4fe73030.css",
+    "static/js/main.89f4c9c8.js"
   ]
 }
